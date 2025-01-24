@@ -517,7 +517,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             os: "linux",
             env: "musl",
             abi: "eabi",
-            unversioned_llvm_target: "arm-unknown-linux-gnueabi",
+            unversioned_llvm_target: "arm-unknown-linux-musleabi",
         },
     ),
     (
@@ -529,7 +529,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             os: "linux",
             env: "musl",
             abi: "eabihf",
-            unversioned_llvm_target: "arm-unknown-linux-gnueabihf",
+            unversioned_llvm_target: "arm-unknown-linux-musleabihf",
         },
     ),
     (
@@ -685,7 +685,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             os: "linux",
             env: "musl",
             abi: "eabi",
-            unversioned_llvm_target: "armv5te-unknown-linux-gnueabi",
+            unversioned_llvm_target: "armv5te-unknown-linux-musleabi",
         },
     ),
     (
@@ -707,7 +707,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             arch: "arm",
             vendor: "unknown",
             os: "freebsd",
-            env: "gnu",
+            env: "",
             abi: "eabihf",
             unversioned_llvm_target: "armv6-unknown-freebsd-gnueabihf",
         },
@@ -791,7 +791,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             arch: "arm",
             vendor: "unknown",
             os: "freebsd",
-            env: "gnu",
+            env: "",
             abi: "eabihf",
             unversioned_llvm_target: "armv7-unknown-freebsd-gnueabihf",
         },
@@ -829,7 +829,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             os: "linux",
             env: "musl",
             abi: "eabi",
-            unversioned_llvm_target: "armv7-unknown-linux-gnueabi",
+            unversioned_llvm_target: "armv7-unknown-linux-musleabi",
         },
     ),
     (
@@ -841,7 +841,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             os: "linux",
             env: "musl",
             abi: "eabihf",
-            unversioned_llvm_target: "armv7-unknown-linux-gnueabihf",
+            unversioned_llvm_target: "armv7-unknown-linux-musleabihf",
         },
     ),
     (
@@ -1385,6 +1385,18 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
         },
     ),
     (
+        "i686-win7-windows-gnu",
+        TargetInfo {
+            full_arch: "i686",
+            arch: "x86",
+            vendor: "win7",
+            os: "windows",
+            env: "gnu",
+            abi: "",
+            unversioned_llvm_target: "i686-pc-windows-gnu",
+        },
+    ),
+    (
         "i686-win7-windows-msvc",
         TargetInfo {
             full_arch: "i686",
@@ -1478,6 +1490,30 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             env: "gnu",
             abi: "",
             unversioned_llvm_target: "m68k-unknown-linux-gnu",
+        },
+    ),
+    (
+        "m68k-unknown-none-elf",
+        TargetInfo {
+            full_arch: "m68k",
+            arch: "m68k",
+            vendor: "unknown",
+            os: "none",
+            env: "",
+            abi: "",
+            unversioned_llvm_target: "m68k",
+        },
+    ),
+    (
+        "mips-mti-none-elf",
+        TargetInfo {
+            full_arch: "mips",
+            arch: "mips",
+            vendor: "mti",
+            os: "none",
+            env: "",
+            abi: "",
+            unversioned_llvm_target: "mips",
         },
     ),
     (
@@ -1577,6 +1613,18 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
         },
     ),
     (
+        "mipsel-mti-none-elf",
+        TargetInfo {
+            full_arch: "mipsel",
+            arch: "mips",
+            vendor: "mti",
+            os: "none",
+            env: "",
+            abi: "",
+            unversioned_llvm_target: "mipsel",
+        },
+    ),
+    (
         "mipsel-sony-psp",
         TargetInfo {
             full_arch: "mipsel",
@@ -1594,8 +1642,8 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             full_arch: "mipsel",
             arch: "mips",
             vendor: "sony",
-            os: "none",
-            env: "psx",
+            os: "psx",
+            env: "",
             abi: "",
             unversioned_llvm_target: "mipsel-sony-psx",
         },
@@ -2617,7 +2665,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             os: "linux",
             env: "musl",
             abi: "eabihf",
-            unversioned_llvm_target: "armv7-unknown-linux-gnueabihf",
+            unversioned_llvm_target: "armv7-unknown-linux-musleabihf",
         },
     ),
     (
@@ -2723,7 +2771,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             arch: "wasm32",
             vendor: "unknown",
             os: "wasi",
-            env: "p1",
+            env: "",
             abi: "",
             unversioned_llvm_target: "wasm32-wasi",
         },
@@ -2737,7 +2785,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             os: "wasi",
             env: "p1",
             abi: "",
-            unversioned_llvm_target: "wasm32-wasi",
+            unversioned_llvm_target: "wasm32-wasip1",
         },
     ),
     (
@@ -3233,6 +3281,18 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
         },
     ),
     (
+        "x86_64-win7-windows-gnu",
+        TargetInfo {
+            full_arch: "x86_64",
+            arch: "x86_64",
+            vendor: "win7",
+            os: "windows",
+            env: "gnu",
+            abi: "",
+            unversioned_llvm_target: "x86_64-pc-windows-gnu",
+        },
+    ),
+    (
         "x86_64-win7-windows-msvc",
         TargetInfo {
             full_arch: "x86_64",
@@ -3241,7 +3301,7 @@ pub(crate) const LIST: &[(&str, TargetInfo<'static>)] = &[
             os: "windows",
             env: "msvc",
             abi: "",
-            unversioned_llvm_target: "x86_64-win7-windows-msvc",
+            unversioned_llvm_target: "x86_64-pc-windows-msvc",
         },
     ),
     (
