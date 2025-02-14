@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.14](https://github.com/dot-asm/cc-rs/compare/cc-v1.2.13...cc-v1.2.14) - 2025-02-14
+
+### Other
+
+- Add support for alternative network stack io-sock on QNX 7.1 aarch64 and x86_64 ([#1312](https://github.com/dot-asm/cc-rs/pull/1312))
+
 ## [1.2.13](https://github.com/rust-lang/cc-rs/compare/cc-v1.2.12...cc-v1.2.13) - 2025-02-08
 
 ### Other
