@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.6](https://github.com/dot-asm/cc-rs/compare/cc-v1.4.5...cc-v1.4.6) - 2026-09-11
+
+### Fixed
+
+- Prevent check_exe from dropping flags on the floor. ([#1884](https://github.com/dot-asm/cc-rs/pull/1884))
+- update fd handling to use BorrowedFd ([#1882](https://github.com/dot-asm/cc-rs/pull/1882))
+
+### Other
+
+- *(deps)* bump tombi-toml/setup-tombi from 1.2.5 to 1.5.0 ([#1885](https://github.com/dot-asm/cc-rs/pull/1885))
+- *(deps)* bump taiki-e/install-action from 2.85.5 to 2.87.2 ([#1886](https://github.com/dot-asm/cc-rs/pull/1886))
+- add toml formatting check ([#1879](https://github.com/dot-asm/cc-rs/pull/1879))
+
 ## [1.4.5](https://github.com/rust-lang/cc-rs/compare/cc-v1.4.4...cc-v1.4.5) - 2026-09-04
 
 ### Fixed
